@@ -8,18 +8,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class PricePage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.prince)
 
+        val buttonExpenditure = findViewById<Button>(R.id.button2)
+            buttonExpenditure.setOnClickListener {
 
-            val buttonNextPage = findViewById<Button>(R.id.button)
-            buttonNextPage.setOnClickListener {
-                // Iniciar a próxima Activity
-                val intent = Intent(this, PricePage::class.java)
-                startActivity(intent)
-            }
+                val intent2 = Intent(this, ExpenditurePage::class.java)
+                startActivity(intent2)
+
+        }
+
     }
 }
