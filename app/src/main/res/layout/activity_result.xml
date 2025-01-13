@@ -8,36 +8,107 @@
     android:layout_height="match_parent"
     tools:context=".ResultActivity">
 
-    <TextView
-        android:id="@+id/textView3"
+    <LinearLayout
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgwhiteheader"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutDistancia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02">
+
+
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="100dp"
+            android:gravity="center"
+            android:maxLength="5"
+            android:textColor="@color/Primary_400"
+            android:textSize="52sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="TextView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPreco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Preco"
-        android:textColor="@color/Primary_400"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:textColor="@color/Primary_400"
+        <TextView
+            android:id="@+id/textViewPre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preco : "
+            android:textColor="@color/Primary_400" />
+
+        <TextView
+            android:id="@+id/txtpreco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FBFAF9"
+            tools:text=" Textview" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutConsumo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Consumo"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutPreco"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:textColor="@color/Primary_400"
+        <TextView
+            android:id="@+id/textViewCons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Consumo : "
+            android:textColor="@color/Primary_400" />
+
+        <TextView
+            android:id="@+id/txtconsumo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FBFAF9"
+            tools:text=" Textview" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDistancia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Distancia/KM"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutConsumo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textViewDist"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Distancia/KM : "
+            android:textColor="@color/Primary_400" />
+
+        <TextView
+            android:id="@+id/txtdistancia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FBFAF9"
+            tools:text=" Textview" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/button4"
@@ -48,4 +119,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gastos estimados:"
+        android:textColor="@color/Primary_400"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutDistancia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_title" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

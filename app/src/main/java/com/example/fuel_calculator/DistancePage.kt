@@ -55,6 +55,9 @@ class DistancePage : AppCompatActivity() {
 
             val intent = Intent(this, ResultActivity::class.java)
             intent.putExtra("COMBUSTIVEL",distancia)
+            intent.putExtra("CONSUMO",consumo)
+            intent.putExtra("PRECO",preco)
+            intent.putExtra("Tpreco",Tpreco)
             startActivity(intent)
 
 
